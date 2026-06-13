@@ -1,0 +1,29 @@
+# Droidian udev rules for Xiaomi Pad 6 (pipa)
+
+# GPU / DRM
+SUBSYSTEM=="drm", KERNEL=="card*", GROUP="video", MODE="0660"
+SUBSYSTEM=="drm", KERNEL=="renderD*", GROUP="video", MODE="0666"
+
+# Input
+SUBSYSTEM=="input", KERNEL=="event*", GROUP="input", MODE="0660"
+
+# Backlight
+SUBSYSTEM=="backlight", KERNEL=="*", GROUP="video", MODE="0664"
+
+# Media / video
+SUBSYSTEM=="media", KERNEL=="media*", GROUP="video", MODE="0660"
+SUBSYSTEM=="video4linux", KERNEL=="video*", GROUP="video", MODE="0660"
+
+# Sensors
+SUBSYSTEM=="iio", GROUP="input", MODE="0660"
+
+# Audio
+SUBSYSTEM=="sound", KERNEL=="controlC*", GROUP="audio", MODE="0660"
+SUBSYSTEM=="sound", KERNEL=="pcmC*", GROUP="audio", MODE="0660"
+SUBSYSTEM=="sound", KERNEL=="timer", GROUP="audio", MODE="0660"
+
+# Power supply
+SUBSYSTEM=="power_supply", GROUP="power", MODE="0664"
+
+# Vibrator
+SUBSYSTEM=="leds", KERNEL=="vibrator*", GROUP="input", MODE="0660"

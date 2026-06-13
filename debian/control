@@ -1,0 +1,24 @@
+Source: adaptation-droidian-pipa
+Maintainer: Droidian Port Maintainer <maintainer@example.com>
+Section: metapackages
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               debhelper-compat (= 13),
+Standards-Version: 4.5.0.3
+Vcs-Browser: https://github.com/your-org/adaptation-droidian-pipa
+Vcs-Git: https://github.com/your-org/adaptation-droidian-pipa.git
+
+Package: adaptation-droidian-pipa
+Architecture: arm64
+Depends: ${misc:Depends},
+         linux-bootimage-xiaomi-pipa,
+         adaptation-hybris-api30-phone,
+         android-system-xiaomi-pipa,
+         adaptation-pipa-configs (= ${binary:Version}),
+         droidian-camera,
+Description: Droidian adaptation for Xiaomi Pad 6 (pipa) - metapackage
+
+Package: adaptation-pipa-configs
+Architecture: arm64
+Depends: ${misc:Depends},
+Description: Droidian adaptation for Xiaomi Pad 6 (pipa) - configuration files

@@ -1,0 +1,6 @@
+/etc/udev/rules.d
+/etc/phosh
+/etc/systemd/system/android-mount.service.d
+/usr/bin
+/usr/lib/droidian/device
+/usr/share/alsa/ucm2/QUALCOMM-SM8250
