@@ -12,8 +12,8 @@ Package: adaptation-droidian-pipa
 Architecture: arm64
 Depends: ${misc:Depends},
          linux-bootimage-xiaomi-pipa,
-         adaptation-hybris-api30-phone,
-         android-system-xiaomi-pipa,
+         adaptation-hybris-api33-phone,
+         android-system-gsi-33-bin,
          adaptation-pipa-configs (= ${binary:Version}),
          droidian-camera,
 Description: Droidian adaptation for Xiaomi Pad 6 (pipa) - metapackage
