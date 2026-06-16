@@ -2,5 +2,5 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: adaptation-droidian-pipa
 
 Files: *
-Copyright: 2026 Droidian Port Maintainer <maintainer@example.com>
+Copyright: 2026 Ayman RGAB <aymanrgab@gmail.com>
 License: BSD-3-Clause

@@ -1,12 +1,12 @@
 Source: adaptation-droidian-pipa
-Maintainer: Droidian Port Maintainer <maintainer@example.com>
+Maintainer: Ayman RGAB <aymanrgab@gmail.com>
 Section: metapackages
 Priority: optional
 Build-Depends: debhelper (>= 10),
                debhelper-compat (= 13),
 Standards-Version: 4.5.0.3
-Vcs-Browser: https://github.com/your-org/adaptation-droidian-pipa
-Vcs-Git: https://github.com/your-org/adaptation-droidian-pipa.git
+Vcs-Browser: https://github.com/aymanrgab/adaptation-droidian-pipa
+Vcs-Git: https://github.com/aymanrgab/adaptation-droidian-pipa.git
 
 Package: adaptation-droidian-pipa
 Architecture: arm64

@@ -1,3 +1,12 @@
+adaptation-droidian-pipa (0.2-1) unstable; urgency=medium
+
+  * Update maintainer email and VCS URLs.
+  * Add Voice.conf and DeepBuffer.conf UCM2 configurations.
+  * Add android-mount.service.d systemd override for partition paths.
+  * Clean up placeholder comments in UCM configs.
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Tue, 16 Jun 2026 20:00:00 +0000
+
 adaptation-droidian-pipa (0.1-1) unstable; urgency=medium
 
   * Initial Droidian port for Xiaomi Pad 6 (pipa).
