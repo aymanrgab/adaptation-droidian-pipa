@@ -2,4 +2,4 @@
 #
 # Uncomment and update the URL and GPG key path once your repository is ready:
 #
-# deb [signed-by=/usr/share/keyrings/xiaomi-pipa.gpg] https://YOUR_REPO_URL bookworm main
+deb https://droidian-pipa-repo-dc12c3.gitlab.io stable main
