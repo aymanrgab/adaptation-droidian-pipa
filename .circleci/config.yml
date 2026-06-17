@@ -9,6 +9,11 @@ jobs:
       - run:
           name: Install build dependencies
           command: |
+            apt-get update -o Acquire::AllowInsecureRepositories=true
+            apt-get install -y droidian-archive-keyring --allow-unauthenticated 2>/dev/null || \
+              (apt-get install -y wget --allow-unauthenticated && \
+               wget -q http://production.repo.droidian.org/droidian-archive-keyring_latest_all.deb -O /tmp/keyring.deb && \
+               dpkg -i /tmp/keyring.deb)
             apt-get update
             apt-get install -y crossbuild-essential-arm64
       - run:
