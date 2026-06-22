@@ -33,15 +33,14 @@ for part in $PARTS; do
         continue
     fi
 
-    # Force-unmount and remove stale dynpart device-mapper targets
+    # Force-unmount and remove stale dynpart device-mapper targets.
+    # Does NOT check for /dev/mapper node — the device may exist in the
+    # kernel table without a udev node yet.
     kill_dynpart() {
         for dm in "$part" "$part$slot"; do
             for suffix in "" "_a" "_b"; do
                 target="dynpart-${dm}${suffix}"
-                mapper="/dev/mapper/$target"
-                [ -e "$mapper" ] || continue
                 # Force-unmount anything mounted from this device
-                umount -l "$mapper" 2>/dev/null || true
                 for mp in /vendor /android/vendor /var/lib/lxc/android/rootfs/vendor; do
                     mountpoint -q "$mp" 2>/dev/null && umount -l "$mp" 2>/dev/null || true
                 done
