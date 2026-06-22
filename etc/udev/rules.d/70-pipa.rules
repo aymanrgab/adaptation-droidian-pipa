@@ -9,6 +9,7 @@ SUBSYSTEM=="input", KERNEL=="event*", GROUP="input", MODE="0660"
 
 # Backlight
 SUBSYSTEM=="backlight", KERNEL=="*", GROUP="video", MODE="0664"
+ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="panel0-backlight", ATTR{brightness}="1000"
 
 # Media / video
 SUBSYSTEM=="media", KERNEL=="media*", GROUP="video", MODE="0660"
