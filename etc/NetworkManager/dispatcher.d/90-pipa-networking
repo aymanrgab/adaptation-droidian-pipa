@@ -12,7 +12,7 @@ IFACE="$1"
 ACTION="$2"
 
 case "$IFACE" in
-    wlan*)
+    wlan*|wlp*)
         case "$ACTION" in
             up|dhcp4-change|connectivity-change|reconnect)
                 # Remove netd's spurious policy routing rule
