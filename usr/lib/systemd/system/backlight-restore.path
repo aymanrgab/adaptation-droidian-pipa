@@ -1,9 +1,0 @@
-[Unit]
-Description=Restore backlight brightness on display resume
-
-[Path]
-PathChanged=/sys/class/backlight/panel0-backlight/bl_power
-Unit=backlight-restore.service
-
-[Install]
-WantedBy=multi-user.target

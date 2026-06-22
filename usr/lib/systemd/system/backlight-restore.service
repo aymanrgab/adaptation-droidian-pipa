@@ -1,7 +1,12 @@
 [Unit]
-Description=Restore backlight brightness
+Description=Restore backlight brightness on display resume
+After=sys-subsystem-backlight-panel0\x2dbacklight.device
 
 [Service]
-Type=oneshot
-ExecStartPre=/bin/sleep 1
-ExecStart=/bin/sh -c 'bl=$(cat /sys/class/backlight/panel0-backlight/bl_power 2>/dev/null); if [ "$bl" = "0" ]; then echo 2000 > /sys/class/backlight/panel0-backlight/brightness; fi'
+Type=simple
+ExecStart=/usr/lib/droidian/device/backlight-restore.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
