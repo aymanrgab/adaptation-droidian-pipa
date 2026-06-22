@@ -1,3 +1,1 @@
 /dev/null /etc/systemd/system/ModemManager.service
-/dev/null /etc/systemd/system/systemd-backlight@backlight:panel0-backlight.service
-/dev/null /etc/systemd/system/systemd-backlight@backlight:4-0011.service
