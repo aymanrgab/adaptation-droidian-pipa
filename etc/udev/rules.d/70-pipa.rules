@@ -351,8 +351,8 @@ SUBSYSTEM=="input", KERNEL=="event*", GROUP="input", MODE="0660"
 # Backlight (generic)
 SUBSYSTEM=="backlight", KERNEL=="*", GROUP="video", MODE="0664"
 
-# Backlight restore on boot
-ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="panel0-backlight", ATTR{brightness}="1000"
+# Backlight restore on boot — replaced by droidian-backlight.service
+# (udev is too early; backlight gets reset by DRM init)
 
 # Media / video (generic)
 SUBSYSTEM=="media", KERNEL=="media*", GROUP="video", MODE="0660"

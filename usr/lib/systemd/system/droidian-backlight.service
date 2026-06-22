@@ -1,0 +1,14 @@
+[Unit]
+Description=Restore backlight brightness for boot splash
+DefaultDependencies=no
+After=systemd-udevd.service
+After=sys-subsystem-backlight-panel0\x2dbacklight.device
+Before=plymouth-start.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh -c 'echo 1000 > /sys/class/backlight/panel0-backlight/brightness'
+
+[Install]
+WantedBy=sysinit.target
