@@ -1,3 +1,11 @@
+adaptation-droidian-pipa (0.6-1) unstable; urgency=medium
+
+  * Add systemd service to bind-mount audio.hidl_compat.default.so as
+    audio.primary.kona.so (fixes PulseAudio crash with proprietary HAL).
+  * Add pulse config arm_droid_card_custom.pa with sink_format=s24le.
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Mon, 22 Jun 2026 08:00:00 +0000
+
 adaptation-droidian-pipa (0.5-1) unstable; urgency=medium
 
   * Improve NM dispatcher: also probe and add default gateway when DHCP fails.

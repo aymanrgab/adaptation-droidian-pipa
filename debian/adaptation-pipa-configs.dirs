@@ -1,5 +1,6 @@
 /etc/udev/rules.d
 /etc/phosh
+/etc/pulse
 /etc/systemd/system/android-mount.service.d
 /usr/bin
 /usr/lib/droidian/device
