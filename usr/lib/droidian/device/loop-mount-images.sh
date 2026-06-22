@@ -33,16 +33,31 @@ for part in $PARTS; do
         continue
     fi
 
-    # Remove any stale dm target for this partition (e.g. dynpart from super)
-    for dm in "$part" "$part$slot"; do
-        [ -e "/dev/mapper/dynpart-$dm" ] && dmsetup remove "dynpart-$dm" 2>/dev/null && echo "$part: removed stale dynpart-$dm"
-        [ -e "/dev/mapper/dynpart-${dm}_a" ] && dmsetup remove "dynpart-${dm}_a" 2>/dev/null && echo "$part: removed stale dynpart-${dm}_a"
-        [ -e "/dev/mapper/dynpart-${dm}_b" ] && dmsetup remove "dynpart-${dm}_b" 2>/dev/null && echo "$part: removed stale dynpart-${dm}_b"
-    done
+    # Force-unmount and remove stale dynpart device-mapper targets
+    kill_dynpart() {
+        for dm in "$part" "$part$slot"; do
+            for suffix in "" "_a" "_b"; do
+                target="dynpart-${dm}${suffix}"
+                mapper="/dev/mapper/$target"
+                [ -e "$mapper" ] || continue
+                # Force-unmount anything mounted from this device
+                umount -l "$mapper" 2>/dev/null || true
+                for mp in /vendor /android/vendor /var/lib/lxc/android/rootfs/vendor; do
+                    mountpoint -q "$mp" 2>/dev/null && umount -l "$mp" 2>/dev/null || true
+                done
+                dmsetup remove "$target" 2>/dev/null && echo "$part: removed stale $target" || true
+            done
+        done
+    }
+
+    kill_dynpart
 
     # Set up loop device
     loop="$(losetup -f --show "$img")"
     echo "$part: $loop -> $img"
+
+    # Kill dynpart again — losetup of large images takes time, dynpart may have appeared
+    kill_dynpart
 
     # Create symlinks (with and without slot suffix for A/B compat)
     mkdir -p /dev/disk/by-partlabel /dev/block/by-partlabel
