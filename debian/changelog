@@ -1,3 +1,11 @@
+adaptation-droidian-pipa (0.7-1) unstable; urgency=medium
+
+  * Add PulseAudio systemd user drop-in to wait for LXC container and
+    restart on failure (fixes PA crash on boot before container is ready).
+  * Remove broken waitforservice ExecStartPre in PA unit.
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Mon, 22 Jun 2026 10:00:00 +0000
+
 adaptation-droidian-pipa (0.6-1) unstable; urgency=medium
 
   * Add systemd service to bind-mount audio.hidl_compat.default.so as

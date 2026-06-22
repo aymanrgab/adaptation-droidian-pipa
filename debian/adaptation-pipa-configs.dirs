@@ -1,6 +1,7 @@
 /etc/udev/rules.d
 /etc/phosh
 /etc/pulse
+/etc/systemd/user/pulseaudio.service.d
 /etc/systemd/system/android-mount.service.d
 /usr/bin
 /usr/lib/droidian/device
