@@ -3,7 +3,6 @@
 /etc/pulse
 /etc/systemd/user/pulseaudio.service.d
 /etc/systemd/system/android-mount.service.d
-/etc/systemd/system/plymouth-start.service.d
 /usr/bin
 /usr/lib/droidian/device
 /usr/lib/adaptation-droidian-pipa/sources.list.d
