@@ -4,7 +4,7 @@
 /etc/systemd/user/pulseaudio.service.d
 /etc/systemd/system/android-mount.service.d
 /usr/bin
-/usr/lib/droidian
+/usr/lib/droidian/device
 /usr/lib/adaptation-droidian-pipa/sources.list.d
 /usr/share/alsa/ucm2/QUALCOMM-SM8250
 /usr/share/keyrings

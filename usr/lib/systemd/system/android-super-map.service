@@ -1,0 +1,11 @@
+[Unit]
+Description=Loop-mount vendor/odm/product.img for Android container
+Before=android-mount.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/lib/droidian/device/loop-mount-images.sh
+
+[Install]
+WantedBy=android-mount.service
