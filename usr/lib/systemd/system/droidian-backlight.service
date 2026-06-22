@@ -1,9 +1,8 @@
 [Unit]
-Description=Restore backlight brightness for boot splash
+Description=Restore backlight brightness
 DefaultDependencies=no
 After=systemd-udevd.service
 After=sys-subsystem-backlight-panel0\x2dbacklight.device
-After=systemd-backlight@panel0-backlight.service
 Before=plymouth-start.service
 
 [Service]
