@@ -1,3 +1,10 @@
+adaptation-droidian-pipa (0.5-1) unstable; urgency=medium
+
+  * Improve NM dispatcher: also probe and add default gateway when DHCP fails.
+  * Add NM conf.d to ignore wlan1 (fixes duplicate WiFi entries in settings).
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Mon, 22 Jun 2026 05:30:00 +0000
+
 adaptation-droidian-pipa (0.4-1) unstable; urgency=medium
 
   * Add udev rule for /dev/uhid permissions (BLuetooth HID keyboards/mice).
