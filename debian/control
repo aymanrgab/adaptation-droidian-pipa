@@ -21,4 +21,6 @@ Description: Droidian adaptation for Xiaomi Pad 6 (pipa) - metapackage
 Package: adaptation-pipa-configs
 Architecture: arm64
 Depends: ${misc:Depends},
+Replaces: bluez (<< 6),
+Breaks: bluez (<< 6),
 Description: Droidian adaptation for Xiaomi Pad 6 (pipa) - configuration files
