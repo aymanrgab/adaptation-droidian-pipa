@@ -4,4 +4,4 @@ Description=Restore backlight brightness
 [Service]
 Type=oneshot
 ExecStartPre=/bin/sleep 1
-ExecStart=/bin/sh -c 'dpms=$(cat /sys/class/drm/card0-DSI-1/dpms 2>/dev/null); if [ "$dpms" = "On" ]; then echo 2000 > /sys/class/backlight/panel0-backlight/brightness; fi'
+ExecStart=/bin/sh -c 'bl=$(cat /sys/class/backlight/panel0-backlight/bl_power 2>/dev/null); if [ "$bl" = "0" ]; then echo 2000 > /sys/class/backlight/panel0-backlight/brightness; fi'

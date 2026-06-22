@@ -2,7 +2,7 @@
 Description=Restore backlight brightness on display resume
 
 [Path]
-PathChanged=/sys/class/drm/card0-DSI-1/dpms
+PathChanged=/sys/class/backlight/panel0-backlight/bl_power
 Unit=backlight-restore.service
 
 [Install]
