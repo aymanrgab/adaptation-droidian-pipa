@@ -1,3 +1,12 @@
+adaptation-droidian-pipa (0.4-1) unstable; urgency=medium
+
+  * Add udev rule for /dev/uhid permissions (BLuetooth HID keyboards/mice).
+  * Add bluetooth/main.conf with ClassicBondedOnly=false for LE HID devices.
+  * Add NetworkManager dispatcher script to remove Android netd's
+    spurious policy routing rule (priority 220) that breaks internet.
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Mon, 22 Jun 2026 05:00:00 +0000
+
 adaptation-droidian-pipa (0.3-1) unstable; urgency=medium
 
   * Add NetworkManager dispatcher script to remove Android netd's

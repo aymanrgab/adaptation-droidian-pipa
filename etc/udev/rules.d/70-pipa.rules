@@ -25,5 +25,9 @@ SUBSYSTEM=="sound", KERNEL=="timer", GROUP="audio", MODE="0660"
 # Power supply
 SUBSYSTEM=="power_supply", GROUP="power", MODE="0664"
 
+# UHID (Bluetooth HID userspace) — Android sets group android_uhid which
+# blocks BlueZ from creating input devices for keyboards/mice.
+KERNEL=="uhid", GROUP="root", MODE="0666"
+
 # Vibrator
 SUBSYSTEM=="leds", KERNEL=="vibrator*", GROUP="input", MODE="0660"
