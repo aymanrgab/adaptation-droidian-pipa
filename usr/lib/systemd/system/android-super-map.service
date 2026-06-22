@@ -1,0 +1,11 @@
+[Unit]
+Description=Map Android logical partitions from super
+Before=android-mount.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/lib/droidian/device/super-map.py
+
+[Install]
+WantedBy=android-mount.service

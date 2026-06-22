@@ -1,0 +1,23 @@
+#!/bin/bash
+# Fix networking on Xiaomi Pad 6 (pipa)
+#
+# Android's netd adds a policy routing rule (priority 220) pointing
+# to a non-existent FIB table. This rule intercepts traffic and causes
+# "Network is unreachable" despite a valid DHCP lease.
+#
+# Remove the spurious rule as long as the interface matches wlan*.
+
+set -e
+
+IFACE="$1"
+ACTION="$2"
+
+case "$IFACE" in
+    wlan*)
+        case "$ACTION" in
+            up|dhcp4-change|connectivity-change|reconnect)
+                ip rule del pref 220 2>/dev/null || true
+                ;;
+        esac
+        ;;
+esac
