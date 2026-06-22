@@ -1,11 +1,11 @@
 [Unit]
-Description=Map Android logical partitions from super
+Description=Loop-mount vendor/odm/product.img for Android container
 Before=android-mount.service
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/lib/droidian/device/super-map.py
+ExecStart=/usr/lib/droidian/device/loop-mount-images.sh
 
 [Install]
 WantedBy=android-mount.service
