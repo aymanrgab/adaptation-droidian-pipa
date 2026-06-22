@@ -1,0 +1,9 @@
+[Unit]
+Description=Restore backlight brightness on display resume
+
+[Path]
+PathChanged=/sys/class/drm/card0-DSI-1/dpms
+Unit=backlight-restore.service
+
+[Install]
+WantedBy=multi-user.target
