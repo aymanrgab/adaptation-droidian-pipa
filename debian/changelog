@@ -1,3 +1,10 @@
+adaptation-droidian-pipa (0.12-1) unstable; urgency=medium
+
+  * Reduce bluebinder timeout from 120s to 10s (first attempt fails,
+    restart succeeds — saves ~110s on boot).
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Wed, 24 Jun 2026 00:00:00 +0000
+
 adaptation-droidian-pipa (0.11-1) unstable; urgency=medium
 
   * Add mask link for mtp-configfs@rndis to adaptation-pipa-configs.links
