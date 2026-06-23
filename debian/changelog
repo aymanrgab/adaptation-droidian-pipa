@@ -1,3 +1,10 @@
+adaptation-droidian-pipa (0.10-1) unstable; urgency=medium
+
+  * Fix camera udev rules: replace non-existent 'camera' group with 'system'
+    (camera device nodes had no valid group, breaking camera access).
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Tue, 23 Jun 2026 22:00:00 +0000
+
 adaptation-droidian-pipa (0.9-1) unstable; urgency=medium
 
   * Remove module-device-manifest from PulseAudio config (module doesn't
