@@ -2,8 +2,4 @@
 load-module module-dbus-protocol
 .endif
 
-.ifexists module-device-manifest.so
-load-module module-device-manifest
-.endif
-
 load-module module-droid-card rate=48000 voice_virtual_stream=true output_deep_buffer=false hw_volume=false sink_format=s24le

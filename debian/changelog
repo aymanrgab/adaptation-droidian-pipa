@@ -1,3 +1,15 @@
+adaptation-droidian-pipa (0.9-1) unstable; urgency=medium
+
+  * Remove module-device-manifest from PulseAudio config (module doesn't
+    exist in Droidian's PulseAudio 14.2 build).
+  * Keep module-dbus-protocol (not loaded by default.pa, needed for
+    GVC to communicate with PulseAudio).
+  * GNOME Settings sound panel issue is a Droidian packaging bug in
+    gnome-control-center (template references non-existent headphone_group
+    widget), not an audio config issue.
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Tue, 23 Jun 2026 21:00:00 +0000
+
 adaptation-droidian-pipa (0.8-1) unstable; urgency=medium
 
   * Add module-dbus-protocol and module-device-manifest to PulseAudio
