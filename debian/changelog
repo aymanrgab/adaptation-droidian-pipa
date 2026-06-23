@@ -1,4 +1,10 @@
-adaptation-droidian-pipa (0.12-1) unstable; urgency=medium
+adaptation-droidian-pipa (0.13-1) trixie; urgency=medium
+
+  * Fix CircleCI tag filter pattern
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Wed, 24 Jun 2026 01:00:00 +0000
+
+adaptation-droidian-pipa (0.12-1) trixie; urgency=medium
 
   * Reduce bluebinder timeout from 120s to 10s (first attempt fails,
     restart succeeds — saves ~110s on boot).
