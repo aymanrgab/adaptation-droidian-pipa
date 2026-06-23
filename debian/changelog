@@ -1,8 +1,7 @@
 adaptation-droidian-pipa (0.11-1) unstable; urgency=medium
 
-  * Add mask links for mtp-configfs@rndis and mobile-power-saver to
-    adaptation-pipa-configs.links (were missing, causing 32min boot
-    delay when mtp-configfs@rndis blocked graphical.target).
+  * Add mask link for mtp-configfs@rndis to adaptation-pipa-configs.links
+    (was missing, causing 32min boot delay when it blocked graphical.target).
 
  -- Ayman RGAB <aymanrgab@gmail.com>  Tue, 23 Jun 2026 23:30:00 +0000
 
