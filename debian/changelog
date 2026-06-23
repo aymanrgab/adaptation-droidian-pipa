@@ -1,4 +1,4 @@
-adaptation-droidian-pipa (0.14-1) trixie; urgency=medium
+adaptation-droidian-pipa (0.14-1) next; urgency=medium
 
   * Fix CircleCI tag filter pattern
 
