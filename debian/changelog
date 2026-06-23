@@ -1,4 +1,11 @@
-adaptation-droidian-pipa (0.13-1) trixie; urgency=medium
+adaptation-droidian-pipa (0.14-1) trixie; urgency=medium
+
+  * Fix CircleCI tag filter pattern
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Wed, 24 Jun 2026 01:00:00 +0000
+
+adaptation-droidian-pipa (0.14-1) trixie; urgency=medium
+>>>>>>> ac1b8aa (Bump version to 0.14)
 
   * Fix CircleCI tag filter pattern
 
