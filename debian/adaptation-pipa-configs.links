@@ -1,1 +1,3 @@
 /dev/null /etc/systemd/system/ModemManager.service
+/dev/null /etc/systemd/system/mtp-configfs@rndis.service
+/dev/null /etc/systemd/system/mobile-power-saver.service
