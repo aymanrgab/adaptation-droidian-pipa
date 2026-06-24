@@ -1,3 +1,14 @@
+adaptation-droidian-pipa (0.33-1) next; urgency=medium
+
+  * Add gst-droid quirks config to enable HDR, ZSL, high-quality
+    edge-mode, and high-quality noise-reduction for camera.
+  * Add camxoverridesettings.txt with quality improvements:
+    HDR, multi-frame noise reduction, ZSL, EIS, JPEG quality 95,
+    full-size QCFA, 3A debug and tuning metadata disabled.
+  * Remove droidian-camera.conf (let app use defaults).
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Wed, 24 Jun 2026 17:50:00 +0000
+
 adaptation-droidian-pipa (0.32-1) next; urgency=medium
 
   * Replace audio HIDL compat bind-mount service with vendor overlay
