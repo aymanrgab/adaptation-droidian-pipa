@@ -5,5 +5,10 @@ case "$1" in
     configure)
         # Reload systemd so it picks up new/updated service units
         systemctl daemon-reload || true
+
+        # Start services immediately so they take effect now, not just on next boot
+        systemctl start android-super-map.service droidian-unblank-display.service \
+            droidian-audio-hidl-compat.service pipa-flashlight-trigger.service || true
+        systemctl try-restart pipa-networking.service || true
         ;;
 esac
