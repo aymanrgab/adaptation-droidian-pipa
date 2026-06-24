@@ -1,3 +1,8 @@
+adaptation-droidian-pipa (0.30-1) next; urgency=medium
+
+  * Fix services not being enabled on install/upgrade: move enable
+    symlinks from postinst to .links file for reliable enabling.
+
 adaptation-droidian-pipa (0.29-1) next; urgency=medium
 
   * Fix WiFi internet after network switch: periodic netd rule 220 cleanup.
