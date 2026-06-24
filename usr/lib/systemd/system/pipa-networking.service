@@ -1,0 +1,9 @@
+[Unit]
+Description=Remove netd rule 220 that breaks WiFi routing
+Documentation=https://github.com/aymanrgab/adaptation-droidian-pipa
+
+[Service]
+Type=oneshot
+ExecStart=-/sbin/ip rule del pref 220
+ExecStart=-/usr/bin/resolvectl flush-caches
+RemainAfterExit=no
