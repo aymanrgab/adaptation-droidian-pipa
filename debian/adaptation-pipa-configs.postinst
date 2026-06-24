@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    configure)
+        # Ensure all adaptation services are enabled on every install/upgrade
+        systemctl daemon-reload || true
+        systemctl enable android-super-map.service || true
+        systemctl enable pipa-networking.service || true
+        systemctl enable droidian-unblank-display.service || true
+        systemctl enable droidian-audio-hidl-compat.service || true
+        ;;
+esac
