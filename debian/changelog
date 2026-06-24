@@ -1,3 +1,12 @@
+adaptation-droidian-pipa (0.29-1) next; urgency=medium
+
+  * Fix WiFi internet after network switch: periodic netd rule 220 cleanup.
+  * Replace timer with ip monitor watcher for instant rule 220 cleanup.
+  * Fix WiFi internet: read correct gateway from NM instead of guessing.
+  * Add postinst to ensure all adaptation services are enabled on install.
+  * Add flashlightd-sysfs-nodes for torch support.
+  * Add flashlight trigger service, sysfs flag.
+
 adaptation-droidian-pipa (0.23-1) next; urgency=medium
 
   * Add postinst to ensure all adaptation services are enabled on install.
