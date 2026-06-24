@@ -1,7 +1,20 @@
+adaptation-droidian-pipa (0.32-1) next; urgency=medium
+
+  * Replace audio HIDL compat bind-mount service with vendor overlay
+    (copy audio.hidl_compat.default.so to /usr/lib/droid-vendor-overlay/
+    lib64/hw/audio.primary.kona.so), avoiding systemd ordering cycle.
+  * Drop droidian-audio-hidl-compat.service (no longer needed).
+  * Fix torch: make /sys/class/leds/flashlight/brightness writable by
+    droidian user via chmod 0666 in pipa-flashlight-trigger.service.
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Wed, 24 Jun 2026 17:00:00 +0000
+
 adaptation-droidian-pipa (0.31-1) next; urgency=medium
 
   * Start services immediately on install/upgrade so oneshot units
     take effect without requiring a reboot.
+
+ -- Ayman RGAB <aymanrgab@gmail.com>  Wed, 24 Jun 2026 16:00:00 +0000
 
 adaptation-droidian-pipa (0.30-1) next; urgency=medium
 

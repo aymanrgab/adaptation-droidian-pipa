@@ -5,7 +5,7 @@ Before=graphical-session.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/bin/sh -c 'echo torch0_trigger > /sys/class/leds/flashlight/trigger || true'
+ExecStart=/bin/sh -c 'chmod 0666 /sys/class/leds/flashlight/brightness 2>/dev/null; echo torch0_trigger > /sys/class/leds/flashlight/trigger || true'
 
 [Install]
 WantedBy=sysinit.target
