@@ -1,42 +1,41 @@
 #!/bin/bash
 # Fix networking on Xiaomi Pad 6 (pipa)
 #
-# Android container side-effects on WiFi:
-#   1. netd adds policy rule at priority 220, breaking routing
+# Two Android-container side-effects on WiFi:
+#   1. netd adds policy rule at priority 220 breaking routing
 #   2. DHCP gateway sometimes not propagated to NetworkManager
-#   3. DNS cache not updated when switching networks
-# This script cleans up on WiFi events.
+# This script cleans up both issues on WiFi connect events.
+
+set -e
 
 IFACE="$1"
 ACTION="$2"
 
 case "$IFACE" in
     wlan*|wlp*)
-        # Remove netd routing rule on any event to prevent stale
-        # rules from persisting through reconnects
-        ip rule del pref 220 2>/dev/null || true
-
         case "$ACTION" in
             up|dhcp4-change|connectivity-change|reconnect)
+                # Remove netd's spurious policy routing rule
+                ip rule del pref 220 2>/dev/null || true
+
                 # Flush systemd-resolved DNS cache
                 resolvectl flush-caches 2>/dev/null || true
 
-                # If no default route exists via this interface, probe
-                # for the gateway. DHCP sometimes fails to provide one
-                # due to Android container interference.
+                # If no default route exists via this interface, probe for
+                # the gateway. DHCP sometimes fails to provide one due to
+                # Android container interference.
                 if ! ip route show default dev "$IFACE" | grep -q .; then
+                    # Get the interface IP network prefix
                     PREFIX=$(ip -4 addr show dev "$IFACE" | \
                              awk '/inet /{print $2}' | head -1 | \
                              sed 's/\.[0-9]*\/[0-9]*$//')
                     if [ -n "$PREFIX" ]; then
+                        # Try common gateway addresses
                         for gw in "$PREFIX.1" "$PREFIX.254"; do
                             ip route add default via "$gw" dev "$IFACE" onlink 2>/dev/null && break
                         done
                     fi
                 fi
-
-                # Retry rule removal after a delay in case netd re-adds it
-                ( sleep 2 && ip rule del pref 220 2>/dev/null || true ) &
                 ;;
         esac
         ;;
