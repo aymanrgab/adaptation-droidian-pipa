@@ -9,5 +9,6 @@ case "$1" in
         systemctl enable pipa-networking.service || true
         systemctl enable droidian-unblank-display.service || true
         systemctl enable droidian-audio-hidl-compat.service || true
+        systemctl enable pipa-flashlight-trigger.service || true
         ;;
 esac

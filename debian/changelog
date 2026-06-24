@@ -1,8 +1,11 @@
 adaptation-droidian-pipa (0.23-1) next; urgency=medium
 
   * Add postinst to ensure all adaptation services are enabled on install.
+  * Add flashlightd-sysfs and flashlightd-sysfs-nodes for torch/flashlight.
+  * Add pipa-flashlight-trigger.service to set torch0_trigger on boot.
+  * Add missing [Install] section to pipa-networking.service.
 
- -- Ayman RGAB <aymanrgab@gmail.com>  Wed, 24 Jun 2026 06:00:00 +0000
+ -- Ayman RGAB <aymanrgab@gmail.com>  Wed, 24 Jun 2026 07:00:00 +0000
 
 adaptation-droidian-pipa (0.12-1) trixie; urgency=medium
 
