@@ -1,4 +1,4 @@
 /dev/null /etc/systemd/system/ModemManager.service
 /dev/null /etc/systemd/system/mtp-configfs@rndis.service
 /usr/lib/systemd/system/droidian-unblank-display.service /etc/systemd/system/sysinit.target.wants/droidian-unblank-display.service
-/usr/lib/systemd/system/pipa-networking.timer /etc/systemd/system/multi-user.target.wants/pipa-networking.timer
+/usr/lib/systemd/system/pipa-networking.service /etc/systemd/system/multi-user.target.wants/pipa-networking.service
