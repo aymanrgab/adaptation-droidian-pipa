@@ -1,3 +1,9 @@
+adaptation-droidian-pipa (0.36-1) next; urgency=medium
+
+  * Disable traditional suspend (broken on Android kernels).
+    Add gsettings override to prevent GNOME from auto-suspending;
+    batman handles battery management instead.
+
 adaptation-droidian-pipa (0.35-1) next; urgency=medium
 
   * Add elogind sleep.conf and restart elogind on install to apply

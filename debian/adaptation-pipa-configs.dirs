@@ -1,6 +1,5 @@
 /etc/udev/rules.d
 /etc/elogind/logind.conf.d
-/etc/elogind/sleep.conf.d
 /etc/phosh
 /etc/pulse
 /etc/flash-bootimage
@@ -12,5 +11,6 @@
 /usr/lib/droid-vendor-overlay/lib64/hw
 /usr/lib/droidian/device
 /usr/lib/adaptation-droidian-pipa/sources.list.d
+/usr/share/glib-2.0/schemas
 /usr/share/alsa/ucm2/QUALCOMM-SM8250
 /usr/share/keyrings
