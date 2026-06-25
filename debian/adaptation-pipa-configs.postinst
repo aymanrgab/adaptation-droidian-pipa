@@ -19,7 +19,9 @@ case "$1" in
         fi
         systemctl try-restart pipa-networking.service || true
 
-        # Apply elogind config changes
-        systemctl try-restart elogind || true
+        # Unmask and start power-profiles-daemon (masked by base system)
+        systemctl unmask power-profiles-daemon.service || true
+        systemctl enable power-profiles-daemon.service || true
+        systemctl start power-profiles-daemon.service || true
         ;;
 esac

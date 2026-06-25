@@ -1,3 +1,7 @@
+adaptation-droidian-pipa (0.40-1) next; urgency=medium
+
+  * Unmask and start power-profiles-daemon in postinst (masked by base).
+
 adaptation-droidian-pipa (0.39-1) next; urgency=medium
 
   * Add pipa-brightness-perm.service to fix brightness node ownership
