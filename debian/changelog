@@ -20,6 +20,10 @@ adaptation-droidian-pipa (0.32-1) next; urgency=medium
 
  -- Ayman RGAB <aymanrgab@gmail.com>  Wed, 24 Jun 2026 17:00:00 +0000
 
+adaptation-droidian-pipa (0.32-1) next; urgency=medium
+
+  * Enable suspend via elogind config.
+
 adaptation-droidian-pipa (0.31-1) next; urgency=medium
 
   * Start services immediately on install/upgrade so oneshot units
