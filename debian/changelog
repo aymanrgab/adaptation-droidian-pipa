@@ -1,3 +1,8 @@
+adaptation-droidian-pipa (0.38-1) next; urgency=medium
+
+  * Add power-profiles-daemon dependency and update perf script to
+    not conflict with it, enabling power profile selection in settings.
+
 adaptation-droidian-pipa (0.37-1) next; urgency=medium
 
   * Mask systemd-udev-settle.service and lxc.service.

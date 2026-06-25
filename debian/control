@@ -16,6 +16,7 @@ Depends: ${misc:Depends},
          android-system-gsi-33,
          adaptation-pipa-configs (= ${binary:Version}),
          droidian-camera,
+         power-profiles-daemon,
 Description: Droidian adaptation for Xiaomi Pad 6 (pipa) - metapackage
 
 Package: adaptation-pipa-configs
