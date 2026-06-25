@@ -1,5 +1,6 @@
 /etc/udev/rules.d
 /etc/elogind/logind.conf.d
+/etc/elogind/sleep.conf.d
 /etc/phosh
 /etc/pulse
 /etc/flash-bootimage

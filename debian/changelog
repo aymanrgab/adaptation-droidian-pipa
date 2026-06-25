@@ -1,6 +1,7 @@
-adaptation-droidian-pipa (0.34-1) next; urgency=medium
+adaptation-droidian-pipa (0.35-1) next; urgency=medium
 
-  * Enable suspend via elogind config.
+  * Add elogind sleep.conf and restart elogind on install to apply
+    suspend config immediately.
 
 adaptation-droidian-pipa (0.33-1) next; urgency=medium
 
