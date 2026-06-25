@@ -1,3 +1,8 @@
+adaptation-droidian-pipa (0.39-1) next; urgency=medium
+
+  * Add pipa-brightness-perm.service to fix brightness node ownership
+    so the Phosh slider uses the full 0-4095 range.
+
 adaptation-droidian-pipa (0.38-1) next; urgency=medium
 
   * Add power-profiles-daemon dependency and update perf script to

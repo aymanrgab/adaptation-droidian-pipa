@@ -351,6 +351,9 @@ SUBSYSTEM=="input", KERNEL=="event*", GROUP="input", MODE="0660"
 # Backlight (generic)
 SUBSYSTEM=="backlight", KERNEL=="*", GROUP="video", MODE="0664"
 
+# Tag the DRM backlight so GSD/backlight-helper prefers it over the I2C one
+ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="panel0-backlight", GROUP="video", MODE="0664", ENV{ID_BACKLIGHT_CLASS}="platform"
+
 # Media / video (generic)
 SUBSYSTEM=="media", KERNEL=="media*", GROUP="video", MODE="0660"
 SUBSYSTEM=="video4linux", KERNEL=="video*", GROUP="video", MODE="0660"
