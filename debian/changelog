@@ -1,3 +1,8 @@
+adaptation-droidian-pipa (0.37-1) next; urgency=medium
+
+  * Mask systemd-udev-settle.service and lxc.service.
+  * Add NetworkManager wifi timeout config for Qualcomm cnss driver.
+
 adaptation-droidian-pipa (0.36-1) next; urgency=medium
 
   * Disable traditional suspend (broken on Android kernels).
