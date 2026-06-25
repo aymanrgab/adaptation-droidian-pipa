@@ -1,0 +1,8 @@
+[Unit]
+Description=Monitor power profile changes
+
+[Path]
+PathModified=/var/lib/power-profiles-daemon/state.ini
+
+[Install]
+WantedBy=multi-user.target

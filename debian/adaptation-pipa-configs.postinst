@@ -23,5 +23,9 @@ case "$1" in
         systemctl unmask power-profiles-daemon.service || true
         systemctl enable power-profiles-daemon.service || true
         systemctl start power-profiles-daemon.service || true
+
+        # Start CPU governor profile handler
+        systemctl start ppd-gov-handler.path || true
+        systemctl start ppd-gov-handler.service || true
         ;;
 esac

@@ -1,3 +1,8 @@
+adaptation-droidian-pipa (0.41-1) next; urgency=medium
+
+  * Add fake driver env and governor handler so all 3 power profiles
+    (performance, balanced, power-saver) are available in settings.
+
 adaptation-droidian-pipa (0.40-1) next; urgency=medium
 
   * Unmask and start power-profiles-daemon in postinst (masked by base).

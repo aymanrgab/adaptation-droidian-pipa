@@ -1,0 +1,11 @@
+#!/bin/bash
+PPROFILE=$(powerprofilesctl get 2>/dev/null)
+case "$PPROFILE" in
+    performance) GOV="performance" ;;
+    power-saver) GOV="powersave" ;;
+    balanced|*) GOV="schedutil" ;;
+esac
+for CPUFREQ in /sys/devices/system/cpu/cpufreq/policy*/scaling_governor; do
+    echo "$GOV" > "$CPUFREQ" 2>/dev/null
+done
+logger -t ppd-gov "Set governor to $GOV (profile: $PPROFILE)"

@@ -8,3 +8,4 @@
 /usr/lib/systemd/system/pipa-networking.service /etc/systemd/system/multi-user.target.wants/pipa-networking.service
 /usr/lib/systemd/system/pipa-flashlight-trigger.service /etc/systemd/system/sysinit.target.wants/pipa-flashlight-trigger.service
 /usr/lib/systemd/system/pipa-brightness-perm.service /etc/systemd/system/multi-user.target.wants/pipa-brightness-perm.service
+/usr/lib/systemd/system/ppd-gov-handler.path /etc/systemd/system/multi-user.target.wants/ppd-gov-handler.path
